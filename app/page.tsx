@@ -85,7 +85,8 @@ export default function Home() {
             aria-controls="site-nav"
             onClick={() => setMenuOpen((current) => !current)}
           >
-            {menuOpen ? "Close" : "Menu"} <span aria-hidden="true">↗</span>
+            {menuOpen ? "Close" : "Menu"}
+            <span className="ui-arrow ui-arrow-diagonal" aria-hidden="true" />
           </button>
 
           <nav id="site-nav" className={menuOpen ? "site-nav is-open" : "site-nav"}>
@@ -115,7 +116,8 @@ export default function Home() {
               <span>focused directly on your brand.</span>
             </p>
             <a className="hero-cta" href="#approach">
-              See how we work <span aria-hidden="true">⟶</span>
+              See how we work
+              <span className="ui-arrow ui-arrow-horizontal" aria-hidden="true" />
             </a>
           </div>
         </div>
@@ -188,7 +190,10 @@ export default function Home() {
               <span className="discipline-number">{discipline.number}</span>
               <h3>{discipline.title}</h3>
               <p>{discipline.copy}</p>
-              <span className="discipline-arrow" aria-hidden="true">↗</span>
+              <span
+                className="discipline-arrow ui-arrow ui-arrow-diagonal"
+                aria-hidden="true"
+              />
             </article>
           ))}
         </div>
@@ -320,7 +325,8 @@ export default function Home() {
             <span>That&apos;s why you&apos;re here.</span>
           </p>
           <a href="mailto:ozzie@bespoke-mktg.com">
-            Start a conversation <span aria-hidden="true">↗</span>
+            Start a conversation
+            <span className="ui-arrow ui-arrow-diagonal" aria-hidden="true" />
           </a>
         </div>
       </section>
@@ -333,7 +339,10 @@ export default function Home() {
           <span>Strategy / Creative Direction / Experience</span>
           <span>bespoke-mktg.com</span>
         </div>
-        <a href="#top">Back to top ↑</a>
+        <a href="#top">
+          Back to top
+          <span className="ui-arrow ui-arrow-up" aria-hidden="true" />
+        </a>
       </footer>
     </main>
   );
