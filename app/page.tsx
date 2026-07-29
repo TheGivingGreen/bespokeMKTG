@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+const githubPagesBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const disciplines = [
   {
     number: "01",
@@ -119,7 +121,7 @@ export default function Home() {
         </div>
 
         <div className="hero-art" aria-hidden="true">
-          <img src="/bespoke-sheep-lineup-transparent.png" alt="" />
+          <img src={`${githubPagesBasePath}/bespoke-sheep-lineup-transparent.png`} alt="" />
         </div>
 
         <span className="hero-corner" aria-hidden="true">⌟</span>
@@ -303,7 +305,7 @@ export default function Home() {
 
       <section className="contact-section" id="contact">
         <div className="contact-sheep" aria-hidden="true">
-          <img src="/bespoke-sheep-hero.png" alt="" />
+          <img src={`${githubPagesBasePath}/bespoke-sheep-hero.png`} alt="" />
         </div>
         <div className="contact-content">
           <span className="contact-label">05 / Your move</span>
