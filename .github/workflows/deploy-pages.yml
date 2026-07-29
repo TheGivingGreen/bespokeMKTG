@@ -1,5 +1,6 @@
 name: Deploy website to GitHub Pages
 
+# Public repository deployment trigger: 2026-07-29
 on:
   push:
     branches:
