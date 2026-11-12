@@ -1827,6 +1827,12 @@ footer > a:last-child {
   white-space: nowrap;
 }
 
+.pd-hero h1 > em {
+  width: 117.65%;
+  transform: scaleX(0.85);
+  transform-origin: left center;
+}
+
 .pd-hero-bottom {
   display: grid;
   width: min(100%, 980px);
