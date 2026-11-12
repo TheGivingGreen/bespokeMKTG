@@ -1821,6 +1821,12 @@ footer > a:last-child {
   font-style: normal;
 }
 
+.pd-hero h1 > span,
+.pd-hero h1 > em {
+  display: block;
+  white-space: nowrap;
+}
+
 .pd-hero-bottom {
   display: grid;
   width: min(100%, 980px);

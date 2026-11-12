@@ -92,10 +92,8 @@ export default function PromotionalDirectorPage() {
         <div className="pd-hero-inner">
           <p className="pd-kicker">For independent bars, clubs and restaurants</p>
           <h1>
-            Your Director
-            <br />
-            of Promotions.
-            <br />
+            <span>Your Director</span>
+            <span>of Promotions.</span>
             <em>Without the salary.</em>
           </h1>
           <div className="pd-hero-bottom">
