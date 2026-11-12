@@ -13,12 +13,12 @@ const processSteps = [
   {
     number: "02",
     title: "Night Identity",
-    copy: "Every night gets a name, a look and a platform plan. People know what is happening and why they should be there.",
+    copy: "Each selected night gets a name, a look and a platform plan. People know what is happening and why they should be there. Night Identities are established during the Promotional System Build. The monthly retainer promotes established nights.",
   },
   {
     number: "03",
     title: "Hero Library Shoot",
-    copy: "A separately priced shoot builds the core photo and video library your venue needs to promote the room, the food, the drinks and the crowd.",
+    copy: "A separately priced shoot builds the core photo and video library your venue needs to promote its food, drinks, crowd and nights.",
   },
   {
     number: "04",
@@ -31,8 +31,8 @@ const monthlyDeliverables = [
   "Social and content",
   "Weekly night promotion",
   "Website updates",
-  "Ticketing and RSVP setup",
-  "A chatbot for reservations or catering",
+  "Ticketing and RSVP setup, available on select tiers",
+  "A chatbot for reservations or catering, available as a separately priced add on",
 ];
 
 export default function PromotionalDirectorPage() {
@@ -95,7 +95,7 @@ export default function PromotionalDirectorPage() {
       <section className="pd-problem pd-section" id="problem">
         <div className="pd-section-label">
           <span>02 / The problem</span>
-          <span>The room cannot promote itself</span>
+          <span>The venue cannot promote itself</span>
         </div>
         <div className="pd-problem-grid">
           <h2>Great nights.<br />Nobody knows.</h2>
@@ -126,7 +126,7 @@ export default function PromotionalDirectorPage() {
           <h2>Not learned<br />from a feed.</h2>
           <p>
             Three decades inside nightlife, hospitality and promotion. The
-            judgment comes from building the night, reading the room and knowing
+            judgment comes from building the night, reading the crowd and knowing
             what makes people move.
           </p>
         </div>
@@ -218,7 +218,7 @@ export default function PromotionalDirectorPage() {
       <section className="pd-monthly pd-section" id="monthly">
         <div className="pd-section-label">
           <span>06 / Every month</span>
-          <span>The work that keeps the room moving</span>
+          <span>The work that keeps the calendar moving</span>
         </div>
         <div className="pd-monthly-layout">
           <h2>What you get<br />each month.</h2>
