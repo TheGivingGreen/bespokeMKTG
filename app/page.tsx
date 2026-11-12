@@ -90,6 +90,7 @@ export default function Home() {
           </button>
 
           <nav id="site-nav" className={menuOpen ? "site-nav is-open" : "site-nav"}>
+            <a href={`${githubPagesBasePath}/promotional-director/`} onClick={() => setMenuOpen(false)}>Promotional Director</a>
             <a href="#work" onClick={() => setMenuOpen(false)}>Work</a>
             <a href="#approach" onClick={() => setMenuOpen(false)}>Approach</a>
             <a href="#services" onClick={() => setMenuOpen(false)}>About</a>
@@ -98,6 +99,14 @@ export default function Home() {
             <span className="nav-plus" aria-hidden="true">+</span>
           </nav>
         </header>
+
+        <a
+          className="home-offer-link"
+          href={`${githubPagesBasePath}/promotional-director/`}
+        >
+          Run a bar, club or restaurant? Meet your Promotional Director.
+          <span className="ui-arrow ui-arrow-horizontal" aria-hidden="true" />
+        </a>
 
         <p className="hero-rail">Independent creative agency / 2026</p>
         <span className="hero-cross hero-cross-left" aria-hidden="true">+</span>
