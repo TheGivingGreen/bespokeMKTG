@@ -18,7 +18,7 @@ const processSteps = [
   {
     number: "03",
     title: "Hero Library Shoot",
-    copy: "We build the core photo and video library your venue needs to promote the room, the food, the drinks and the crowd.",
+    copy: "A separately priced shoot builds the core photo and video library your venue needs to promote the room, the food, the drinks and the crowd.",
   },
   {
     number: "04",
@@ -33,24 +33,6 @@ const monthlyDeliverables = [
   "Website updates",
   "Ticketing and RSVP setup",
   "A chatbot for reservations or catering",
-];
-
-const pricingTiers = [
-  {
-    number: "01",
-    name: "[TIER NAME]",
-    price: "[$PRICE]",
-  },
-  {
-    number: "02",
-    name: "[TIER NAME]",
-    price: "[$PRICE]",
-  },
-  {
-    number: "03",
-    name: "[TIER NAME]",
-    price: "[$PRICE]",
-  },
 ];
 
 export default function PromotionalDirectorPage() {
@@ -125,7 +107,8 @@ export default function PromotionalDirectorPage() {
             </p>
             <p>
               You do not need another person waiting for instructions. You need
-              your own Director of Promotions without the $70K to $150K salary.
+              senior promotional direction without adding another full time
+              salary to payroll.
             </p>
             <p className="pd-emphasis">
               AI handles production. Ozzie&apos;s 30 years decides what gets made.
@@ -148,6 +131,11 @@ export default function PromotionalDirectorPage() {
           </p>
         </div>
 
+        <p className="pd-career-label">
+          Selected career highlights from more than 30 years working across
+          hundreds of venues nationwide.
+        </p>
+
         <div className="pd-credential-list">
           <article>
             <span>01</span>
@@ -163,25 +151,6 @@ export default function PromotionalDirectorPage() {
             </p>
           </article>
         </div>
-
-        <div className="pd-stat-row">
-          <article>
-            <strong>10,000+</strong>
-            <span>guests since September</span>
-          </article>
-          <article>
-            <strong>1,200</strong>
-            <span>in one night at Sovereign</span>
-          </article>
-        </div>
-
-        <div className="pd-client-row" aria-label="Selected client names">
-          <span>Coca Cola</span>
-          <span>Walmart</span>
-          <span>T Mobile</span>
-          <span>Def Jam</span>
-          <span>Warner Music Group</span>
-        </div>
       </section>
 
       <section className="pd-process pd-section" id="process">
@@ -192,8 +161,10 @@ export default function PromotionalDirectorPage() {
         <div className="pd-process-intro">
           <h2>Four moves.<br />Then every month.</h2>
           <p>
-            We build the foundation once. Then the ongoing monthly work keeps
-            the nights visible, the calendar moving and every channel current.
+            The separately priced Promotional System Build creates the
+            foundation before the retainer begins. The Hero Library Shoot is
+            priced separately. Then the ongoing monthly work keeps the nights
+            visible, the calendar moving and every channel current.
           </p>
         </div>
         <div className="pd-process-grid">
@@ -263,31 +234,9 @@ export default function PromotionalDirectorPage() {
         </div>
       </section>
 
-      <section className="pd-pricing pd-section" id="pricing">
-        <div className="pd-section-label pd-section-label-light">
-          <span>07 / Pricing</span>
-          <span>Choose the level of support</span>
-        </div>
-        <div className="pd-pricing-head">
-          <h2>Your promotions<br />department.</h2>
-          <p>Without a full time salary.</p>
-        </div>
-        <div className="pd-pricing-grid">
-          {pricingTiers.map((tier) => (
-            <article key={tier.number}>
-              <span>{tier.number}</span>
-              <h3>{tier.name}</h3>
-              <strong>{tier.price}</strong>
-              <p>Monthly retainer</p>
-            </article>
-          ))}
-        </div>
-        <p className="pd-pricing-note">90 day start, month to month after.</p>
-      </section>
-
       <section className="pd-final" id="contact">
         <div>
-          <span>08 / Your move</span>
+          <span>07 / Your move</span>
           <h2>You already know<br />something isn&apos;t working.</h2>
           <a className="pd-button pd-button-dark" href="[BOOKING LINK PLACEHOLDER]">
             Book a 30 minute walkthrough

@@ -1980,6 +1980,19 @@ footer > a:last-child {
   border-top: 1px solid var(--line-dark);
 }
 
+.pd-career-label {
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+  margin: 0 0 clamp(30px, 3vw, 52px);
+  color: var(--magenta);
+  font-size: clamp(15px, 1.25vw, 22px);
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
 .pd-credential-list article {
   display: grid;
   padding: clamp(30px, 3vw, 52px) 0;
