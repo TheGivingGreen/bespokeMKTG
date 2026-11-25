@@ -4,6 +4,11 @@ import { useState } from "react";
 
 const githubPagesBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
+// Booking goes to email for now (Ozzie, Nov 25, 2026). Swap for a scheduling link later.
+const bookingHref =
+  "mailto:ozzie@bespoke-mktg.com?subject=" +
+  encodeURIComponent("Promotional Director walkthrough");
+
 const processSteps = [
   {
     number: "01",
@@ -65,7 +70,7 @@ export default function PromotionalDirectorPage() {
             <a href="#top" onClick={() => setMenuOpen(false)}>Promotional Director</a>
             <a href={`${githubPagesBasePath}/#work`} onClick={() => setMenuOpen(false)}>Work</a>
             <a href={`${githubPagesBasePath}/#approach`} onClick={() => setMenuOpen(false)}>Approach</a>
-            <a href={`${githubPagesBasePath}/#services`} onClick={() => setMenuOpen(false)}>About</a>
+            <a href={`${githubPagesBasePath}/#services`} onClick={() => setMenuOpen(false)}>Services</a>
             <a href={`${githubPagesBasePath}/#contact`} onClick={() => setMenuOpen(false)}>Contact</a>
             <span className="nav-plus" aria-hidden="true">+</span>
           </nav>
@@ -82,7 +87,7 @@ export default function PromotionalDirectorPage() {
             <p>30 years of filling rooms, now running your nights.</p>
             <a
               className="pd-button pd-button-light"
-              href="[BOOKING LINK PLACEHOLDER]"
+              href={bookingHref}
             >
               Book a 30 minute walkthrough
               <span className="ui-arrow ui-arrow-horizontal" aria-hidden="true" />
@@ -238,7 +243,7 @@ export default function PromotionalDirectorPage() {
         <div>
           <span>07 / Your move</span>
           <h2>You already know<br />something isn&apos;t working.</h2>
-          <a className="pd-button pd-button-dark" href="[BOOKING LINK PLACEHOLDER]">
+          <a className="pd-button pd-button-dark" href={bookingHref}>
             Book a 30 minute walkthrough
             <span className="ui-arrow ui-arrow-horizontal" aria-hidden="true" />
           </a>

@@ -879,6 +879,38 @@ button {
   -webkit-text-stroke: 2px var(--ink);
 }
 
+
+.caviar .project-visual {
+  background:
+    radial-gradient(circle at 50% 50%, transparent 0 34%, rgba(201, 162, 39, 0.55) 34.2% 34.8%, transparent 35% 44%, rgba(201, 162, 39, 0.35) 44.2% 44.6%, transparent 44.8%),
+    #0f1c33;
+  color: #f3ead7;
+}
+
+.caviar .project-mark {
+  color: #c9a227;
+}
+
+.chef-mike .project-visual {
+  background:
+    linear-gradient(180deg, transparent 62%, rgba(232, 93, 4, 0.85) 62%, rgba(232, 93, 4, 0.85) 66%, transparent 66%),
+    #1c1a18;
+  color: #f5f0e8;
+}
+
+.project-link {
+  display: inline-flex;
+  margin-top: 14px;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-bespoke);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid currentColor;
+}
+
 .project-meta {
   display: grid;
   padding-top: 20px;

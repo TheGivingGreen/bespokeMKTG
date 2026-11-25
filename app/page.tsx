@@ -40,6 +40,8 @@ const projects = [
     copy: "A charity golf event built into a complete brand, merchandise platform, digital experience, and growing community.",
     className: "giving-green",
     mark: "FORE GOOD",
+    url: "https://thegivinggreen.org",
+    urlLabel: "thegivinggreen.org",
   },
   {
     number: "02",
@@ -48,6 +50,8 @@ const projects = [
     copy: "A trusted St. Louis roofing company repositioned through clearer strategy, stronger language, and a rebuilt digital presence.",
     className: "oxford",
     mark: "BUILT TO OUTLAST",
+    url: "https://oxfordroofingusa.com",
+    urlLabel: "oxfordroofingusa.com",
   },
   {
     number: "03",
@@ -59,6 +63,26 @@ const projects = [
   },
   {
     number: "04",
+    name: "Caviar Louie",
+    category: "Brand / Website / Search",
+    copy: "St. Louis' first premier mobile caviar cart, launched with a complete website, seven occasion pages, a brand identity kit, and search built for AI answers.",
+    className: "caviar",
+    mark: "WE COME TO YOU",
+    url: "https://caviarlouie.com",
+    urlLabel: "caviarlouie.com",
+  },
+  {
+    number: "05",
+    name: "Chef Mike Johnson",
+    category: "Personal Brand / Website",
+    copy: "A personal brand and website for the St. Louis pitmaster behind Sugarfire Smoke House and Hi-Pointe Drive-In.",
+    className: "chef-mike",
+    mark: "PITMASTER",
+    url: "https://chefmikejohnson.com",
+    urlLabel: "chefmikejohnson.com",
+  },
+  {
+    number: "06",
     name: "Hospitality & Experiences",
     category: "Promotion / Activation / Participation",
     copy: "Thirty-plus years of building promotions, events, environments, and customer experiences that move people from attention to participation.",
@@ -93,8 +117,7 @@ export default function Home() {
             <a href={`${githubPagesBasePath}/promotional-director/`} onClick={() => setMenuOpen(false)}>Promotional Director</a>
             <a href="#work" onClick={() => setMenuOpen(false)}>Work</a>
             <a href="#approach" onClick={() => setMenuOpen(false)}>Approach</a>
-            <a href="#services" onClick={() => setMenuOpen(false)}>About</a>
-            <a href="#system" onClick={() => setMenuOpen(false)}>Journal</a>
+            <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
             <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
             <span className="nav-plus" aria-hidden="true">+</span>
           </nav>
@@ -239,6 +262,17 @@ export default function Home() {
                 <div>
                   <span>{project.category}</span>
                   <p>{project.copy}</p>
+                  {project.url ? (
+                    <a
+                      className="project-link"
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.urlLabel}
+                      <span className="ui-arrow ui-arrow-diagonal" aria-hidden="true" />
+                    </a>
+                  ) : null}
                 </div>
               </div>
             </article>
