@@ -60,6 +60,8 @@ const projects = [
     copy: "A construction company shaped into a cohesive identity across its website, social presence, business materials, and market presentation.",
     className: "cornerstone",
     mark: "FOUNDATION",
+    url: "https://cornerstone.construction",
+    urlLabel: "cornerstone.construction",
   },
   {
     number: "04",
