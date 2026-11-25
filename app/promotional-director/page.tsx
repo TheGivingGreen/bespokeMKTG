@@ -152,7 +152,7 @@ export default function PromotionalDirectorPage() {
             <h3>Built and directed</h3>
             <p>
               Founded Sniper Marketing. Directed promotions at TAO Las Vegas.
-              Launched Home Nightclub at Ameristar St. Louis. Angad Arts Hotel.
+              Launched Home Nightclub at Ameristar St. Charles. Angad Arts Hotel.
             </p>
           </article>
         </div>
