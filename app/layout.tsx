@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Anton, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const githubPagesBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -7,6 +7,13 @@ const githubPagesBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const anton = Anton({
+  variable: "--font-display",
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -35,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} antialiased`}
       >
         {children}
       </body>
