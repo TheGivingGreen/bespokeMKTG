@@ -40,6 +40,7 @@ const projects = [
     copy: "A charity golf event built into a complete brand, merchandise platform, digital experience, and growing community.",
     className: "giving-green",
     mark: "FORE GOOD",
+    shot: "/work/giving-green.jpg",
     url: "https://thegivinggreen.org",
     urlLabel: "thegivinggreen.org",
   },
@@ -50,6 +51,7 @@ const projects = [
     copy: "A trusted St. Louis roofing company repositioned through clearer strategy, stronger language, and a rebuilt digital presence.",
     className: "oxford",
     mark: "BUILT TO OUTLAST",
+    shot: "/work/oxford.jpg",
     url: "https://oxfordroofingusa.com",
     urlLabel: "oxfordroofingusa.com",
   },
@@ -60,6 +62,7 @@ const projects = [
     copy: "A construction company shaped into a cohesive identity across its website, social presence, business materials, and market presentation.",
     className: "cornerstone",
     mark: "FOUNDATION",
+    shot: "/work/cornerstone.jpg",
     url: "https://cornerstone.construction",
     urlLabel: "cornerstone.construction",
   },
@@ -70,6 +73,7 @@ const projects = [
     copy: "St. Louis' first premier mobile caviar cart, launched with a complete website, seven occasion pages, a brand identity kit, and search built for AI answers.",
     className: "caviar",
     mark: "WE COME TO YOU",
+    shot: "/work/caviar.jpg",
     url: "https://caviarlouie.com",
     urlLabel: "caviarlouie.com",
   },
@@ -80,6 +84,7 @@ const projects = [
     copy: "A personal brand and website for the St. Louis pitmaster behind Sugarfire Smoke House and Hi-Pointe Drive-In.",
     className: "chef-mike",
     mark: "PITMASTER",
+    shot: "/work/chef-mike.jpg",
     url: "https://chefmikejohnson.com",
     urlLabel: "chefmikejohnson.com",
   },
@@ -252,7 +257,19 @@ export default function Home() {
           {projects.map((project) => (
             <article className={`project ${project.className}`} key={project.number}>
               <div className="project-visual" aria-hidden="true">
-                <span className="project-mark">{project.mark}</span>
+                {project.shot ? (
+                  <div className="project-browser">
+                    <div className="project-browser-bar">
+                      <i />
+                      <i />
+                      <i />
+                      <span>{project.urlLabel}</span>
+                    </div>
+                    <img src={`${githubPagesBasePath}${project.shot}`} alt="" loading="lazy" />
+                  </div>
+                ) : (
+                  <span className="project-mark">{project.mark}</span>
+                )}
                 <span className="project-index">{project.number}</span>
                 <span className="project-cross">+</span>
               </div>

@@ -898,6 +898,88 @@ button {
   color: #f5f0e8;
 }
 
+
+/* Case study cards: the client's real homepage in a minimal browser frame on its brand colour. */
+.project-browser {
+  position: relative;
+  z-index: 2;
+  width: 84%;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.2);
+  transform: rotate(-2deg);
+  transition: transform 0.4s ease;
+}
+
+.project:hover .project-browser {
+  transform: rotate(0deg) scale(1.015);
+}
+
+.project-browser-bar {
+  display: flex;
+  height: 26px;
+  padding: 0 12px;
+  align-items: center;
+  gap: 6px;
+  background: #ecebe8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.project-browser-bar i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c9c7c2;
+}
+
+.project-browser-bar span {
+  margin-left: 10px;
+  color: #6b6965;
+  font-family: var(--font-bespoke);
+  font-size: 10px;
+  letter-spacing: 0.02em;
+}
+
+.project-browser img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
+}
+
+@media (max-width: 800px) {
+  .project-browser {
+    width: 88%;
+    border-radius: 7px;
+  }
+
+  .project-browser-bar {
+    height: 18px;
+    padding: 0 8px;
+    gap: 4px;
+  }
+
+  .project-browser-bar i {
+    width: 6px;
+    height: 6px;
+  }
+
+  .project-browser-bar span {
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-browser,
+  .project:hover .project-browser {
+    transform: none;
+    transition: none;
+  }
+}
+
 .project-link {
   display: inline-flex;
   margin-top: 14px;
