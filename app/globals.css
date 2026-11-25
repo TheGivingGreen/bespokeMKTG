@@ -849,13 +849,6 @@ button {
   transform: rotate(-7deg);
 }
 
-.oxford .project-visual {
-  background:
-    linear-gradient(135deg, transparent 43%, #3c3c3c 43%, #3c3c3c 57%, transparent 57%),
-    #111;
-  color: white;
-}
-
 .cornerstone .project-visual {
   background:
     linear-gradient(90deg, transparent 49.6%, #111 49.6%, #111 50.4%, transparent 50.4%),
@@ -969,6 +962,38 @@ button {
   .promo-card-sheep {
     right: -4%;
     height: 66%;
+  }
+}
+
+@media (min-width: 801px) {
+  .promo-director {
+    grid-column: 1 / -1;
+    margin-top: 40px;
+  }
+
+  .promo-director .project-visual {
+    min-height: clamp(520px, 44vw, 760px);
+  }
+
+  .promo-director .promo-card-line {
+    margin-left: 4.5%;
+    font-size: min(15cqw, 270px);
+  }
+
+  .promo-director .promo-card-sheep {
+    right: 7%;
+    height: 90%;
+  }
+
+  .promo-director .promo-card-top {
+    left: 4.5%;
+    top: 7%;
+  }
+
+  .promo-director .promo-card-bottom {
+    left: 4.5%;
+    right: 3.5%;
+    bottom: 7%;
   }
 }
 
