@@ -90,11 +90,13 @@ const projects = [
   },
   {
     number: "06",
-    name: "Hospitality & Experiences",
+    name: "Promotional Director",
     category: "Promotion / Activation / Participation",
     copy: "Thirty-plus years of building promotions, events, environments, and customer experiences that move people from attention to participation.",
-    className: "hospitality",
-    mark: "BE THERE",
+    className: "promo-director",
+    mark: "MAKE A SCENE.",
+    href: "/promotional-director/",
+    linkLabel: "See the Promotional Director",
   },
 ];
 
@@ -254,7 +256,49 @@ export default function Home() {
         </div>
 
         <div className="projects">
-          {projects.map((project) => (
+          {projects.map((project) =>
+            project.href ? (
+            <article className={`project ${project.className}`} key={project.number}>
+              <a className="project-card-link" href={`${githubPagesBasePath}${project.href}`}>
+                <div className="project-visual promo-card">
+                  <div className="promo-card-top">
+                    <span>{project.name}</span>
+                    <i aria-hidden="true" />
+                  </div>
+                  <p className="promo-card-line">
+                    Make a
+                    <br />
+                    scene.
+                  </p>
+                  <img
+                    className="promo-card-sheep"
+                    src={`${githubPagesBasePath}/work/black-sheep-shades.jpg`}
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span className="promo-card-corner" aria-hidden="true" />
+                  <div className="promo-card-bottom" aria-hidden="true">
+                    <i />
+                    <span className="ui-arrow ui-arrow-horizontal" />
+                  </div>
+                </div>
+                <div className="project-meta">
+                  <div>
+                    <span>{project.number} / Service</span>
+                    <h3>{project.name}</h3>
+                  </div>
+                  <div>
+                    <span>{project.category}</span>
+                    <p>{project.copy}</p>
+                    <span className="project-link">
+                      {project.linkLabel}
+                      <span className="ui-arrow ui-arrow-horizontal" aria-hidden="true" />
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </article>
+            ) : (
             <article className={`project ${project.className}`} key={project.number}>
               <div className="project-visual" aria-hidden="true">
                 {project.shot ? (
@@ -295,7 +339,8 @@ export default function Home() {
                 </div>
               </div>
             </article>
-          ))}
+            ),
+          )}
         </div>
 
         <h3 className="work-close">
