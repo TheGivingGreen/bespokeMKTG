@@ -4,6 +4,22 @@ import { useState } from "react";
 
 const githubPagesBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
+// Booking goes to email for now (Ozzie, Nov 25, 2026). Swap for a scheduling link later.
+const eventPhotos = [
+  { file: "skyline", alt: "Guests in silhouette against the St. Louis skyline and the Arch at dusk" },
+  { file: "red-room", alt: "A packed dance floor in red light, seen from above" },
+  { file: "blue-room", alt: "A crowd under blue light beams with hands in the air" },
+  { file: "line", alt: "A line of guests along the barricade outside a venue at night" },
+  { file: "decks", alt: "DJ decks with the crowd behind, shot on film" },
+  { file: "dj-booth", alt: "A DJ booth built from speakers painted as cartoon faces" },
+  { file: "blue-haze", alt: "A crowd facing a hazy blue-lit stage" },
+  { file: "lasers", alt: "A packed room under yellow and purple lasers" },
+];
+
+const bookingHref =
+  "mailto:ozzie@bespoke-mktg.com?subject=" +
+  encodeURIComponent("Promotional Director walkthrough");
+
 const processSteps = [
   {
     number: "01",
@@ -65,7 +81,7 @@ export default function PromotionalDirectorPage() {
             <a href="#top" onClick={() => setMenuOpen(false)}>Promotional Director</a>
             <a href={`${githubPagesBasePath}/#work`} onClick={() => setMenuOpen(false)}>Work</a>
             <a href={`${githubPagesBasePath}/#approach`} onClick={() => setMenuOpen(false)}>Approach</a>
-            <a href={`${githubPagesBasePath}/#services`} onClick={() => setMenuOpen(false)}>About</a>
+            <a href={`${githubPagesBasePath}/#services`} onClick={() => setMenuOpen(false)}>Services</a>
             <a href={`${githubPagesBasePath}/#contact`} onClick={() => setMenuOpen(false)}>Contact</a>
             <span className="nav-plus" aria-hidden="true">+</span>
           </nav>
@@ -82,7 +98,7 @@ export default function PromotionalDirectorPage() {
             <p>30 years of filling rooms, now running your nights.</p>
             <a
               className="pd-button pd-button-light"
-              href="[BOOKING LINK PLACEHOLDER]"
+              href={bookingHref}
             >
               Book a 30 minute walkthrough
               <span className="ui-arrow ui-arrow-horizontal" aria-hidden="true" />
@@ -139,18 +155,43 @@ export default function PromotionalDirectorPage() {
         <div className="pd-credential-list">
           <article>
             <span>01</span>
-            <h3>1990s New York nightlife</h3>
-            <p>Tunnel, Twilo, Centro Fly, Webster Hall, Lyricist Lounge</p>
+            <h3>Director of Promotions</h3>
+            <p>TAO Las Vegas. Groove Jet, Miami. Centro-Fly, New York.</p>
           </article>
           <article>
             <span>02</span>
-            <h3>Built and directed</h3>
+            <h3>Director of VIP Distribution</h3>
+            <p>Hamptons Magazine, BlackBook, Manhattan File and Zink.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>New York nightlife</h3>
             <p>
-              Founded Sniper Marketing. Directed promotions at TAO Las Vegas.
-              Launched Home Nightclub at Ameristar St. Louis. Angad Arts Hotel.
+              Tunnel, Twilo, Webster Hall and Lyricist Lounge. Founded Sniper
+              Marketing, featured in Newsday in 2005.
             </p>
           </article>
+          <article>
+            <span>04</span>
+            <h3>St. Louis</h3>
+            <p>Launched Home Nightclub at Ameristar St. Charles. Angad Arts Hotel.</p>
+          </article>
         </div>
+
+        <figure className="pd-rooms">
+          <div className="pd-rooms-grid">
+            {eventPhotos.map((photo) => (
+              <img
+                key={photo.file}
+                className={`pd-room pd-room-${photo.file}`}
+                src={`${githubPagesBasePath}/events/${photo.file}.jpg`}
+                alt={photo.alt}
+                loading="lazy"
+              />
+            ))}
+          </div>
+          <figcaption>From Ozzie&apos;s events</figcaption>
+        </figure>
       </section>
 
       <section className="pd-process pd-section" id="process">
@@ -238,7 +279,7 @@ export default function PromotionalDirectorPage() {
         <div>
           <span>07 / Your move</span>
           <h2>You already know<br />something isn&apos;t working.</h2>
-          <a className="pd-button pd-button-dark" href="[BOOKING LINK PLACEHOLDER]">
+          <a className="pd-button pd-button-dark" href={bookingHref}>
             Book a 30 minute walkthrough
             <span className="ui-arrow ui-arrow-horizontal" aria-hidden="true" />
           </a>

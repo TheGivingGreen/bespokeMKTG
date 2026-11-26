@@ -1,0 +1,8 @@
+# Netlify builds this as a standard Next.js site. The package.json "build" script
+# targets the ChatGPT Sites tooling (vinext) and is not used here.
+[build]
+  command = "npx next build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"

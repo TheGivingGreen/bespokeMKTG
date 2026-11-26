@@ -40,30 +40,52 @@ const projects = [
     copy: "A charity golf event built into a complete brand, merchandise platform, digital experience, and growing community.",
     className: "giving-green",
     mark: "FORE GOOD",
+    shot: "/work/giving-green.jpg",
+    url: "https://thegivinggreen.org",
+    urlLabel: "thegivinggreen.org",
   },
   {
     number: "02",
-    name: "Oxford Roofing",
-    category: "Strategy / Voice / Website",
-    copy: "A trusted St. Louis roofing company repositioned through clearer strategy, stronger language, and a rebuilt digital presence.",
-    className: "oxford",
-    mark: "BUILT TO OUTLAST",
+    name: "Chef Mike Johnson",
+    category: "Personal Brand / Website",
+    copy: "A personal brand and website for the St. Louis pitmaster behind Sugarfire Smoke House and Hi-Pointe Drive-In.",
+    className: "chef-mike",
+    mark: "PITMASTER",
+    shot: "/work/chef-mike.jpg",
+    url: "https://chefmikejohnson.com",
+    urlLabel: "chefmikejohnson.com",
   },
   {
     number: "03",
+    name: "Caviar Louie",
+    category: "Brand / Website / Search",
+    copy: "St. Louis' first premier mobile caviar cart, launched with a complete website, seven occasion pages, a brand identity kit, and search built for AI answers.",
+    className: "caviar",
+    mark: "WE COME TO YOU",
+    shot: "/work/caviar.jpg",
+    url: "https://caviarlouie.com",
+    urlLabel: "caviarlouie.com",
+  },
+  {
+    number: "04",
     name: "Cornerstone Construction",
     category: "Identity / Digital / Market Presence",
     copy: "A construction company shaped into a cohesive identity across its website, social presence, business materials, and market presentation.",
     className: "cornerstone",
     mark: "FOUNDATION",
+    shot: "/work/cornerstone.jpg",
+    url: "https://cornerstone.construction",
+    urlLabel: "cornerstone.construction",
   },
   {
-    number: "04",
-    name: "Hospitality & Experiences",
+    number: "05",
+    name: "Promotional Director",
     category: "Promotion / Activation / Participation",
     copy: "Thirty-plus years of building promotions, events, environments, and customer experiences that move people from attention to participation.",
-    className: "hospitality",
-    mark: "BE THERE",
+    className: "promo-director",
+    mark: "MAKE A SCENE.",
+    href: "/promotional-director/",
+    linkLabel: "See the Promotional Director",
   },
 ];
 
@@ -93,8 +115,7 @@ export default function Home() {
             <a href={`${githubPagesBasePath}/promotional-director/`} onClick={() => setMenuOpen(false)}>Promotional Director</a>
             <a href="#work" onClick={() => setMenuOpen(false)}>Work</a>
             <a href="#approach" onClick={() => setMenuOpen(false)}>Approach</a>
-            <a href="#services" onClick={() => setMenuOpen(false)}>About</a>
-            <a href="#system" onClick={() => setMenuOpen(false)}>Journal</a>
+            <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
             <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
             <span className="nav-plus" aria-hidden="true">+</span>
           </nav>
@@ -224,10 +245,64 @@ export default function Home() {
         </div>
 
         <div className="projects">
-          {projects.map((project) => (
+          {projects.map((project) =>
+            project.href ? (
+            <article className={`project ${project.className}`} key={project.number}>
+              <a className="project-card-link" href={`${githubPagesBasePath}${project.href}`}>
+                <div className="project-visual promo-card">
+                  <div className="promo-card-top">
+                    <span>{project.name}</span>
+                    <i aria-hidden="true" />
+                  </div>
+                  <p className="promo-card-line">
+                    Make a
+                    <br />
+                    scene.
+                  </p>
+                  <img
+                    className="promo-card-sheep"
+                    src={`${githubPagesBasePath}/work/black-sheep-shades.jpg`}
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span className="promo-card-corner" aria-hidden="true" />
+                  <div className="promo-card-bottom" aria-hidden="true">
+                    <i />
+                    <span className="ui-arrow ui-arrow-horizontal" />
+                  </div>
+                </div>
+                <div className="project-meta">
+                  <div>
+                    <span>{project.number} / Service</span>
+                    <h3>{project.name}</h3>
+                  </div>
+                  <div>
+                    <span>{project.category}</span>
+                    <p>{project.copy}</p>
+                    <span className="project-link">
+                      {project.linkLabel}
+                      <span className="ui-arrow ui-arrow-horizontal" aria-hidden="true" />
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </article>
+            ) : (
             <article className={`project ${project.className}`} key={project.number}>
               <div className="project-visual" aria-hidden="true">
-                <span className="project-mark">{project.mark}</span>
+                {project.shot ? (
+                  <div className="project-browser">
+                    <div className="project-browser-bar">
+                      <i />
+                      <i />
+                      <i />
+                      <span>{project.urlLabel}</span>
+                    </div>
+                    <img src={`${githubPagesBasePath}${project.shot}`} alt="" loading="lazy" />
+                  </div>
+                ) : (
+                  <span className="project-mark">{project.mark}</span>
+                )}
                 <span className="project-index">{project.number}</span>
                 <span className="project-cross">+</span>
               </div>
@@ -239,10 +314,22 @@ export default function Home() {
                 <div>
                   <span>{project.category}</span>
                   <p>{project.copy}</p>
+                  {project.url ? (
+                    <a
+                      className="project-link"
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.urlLabel}
+                      <span className="ui-arrow ui-arrow-diagonal" aria-hidden="true" />
+                    </a>
+                  ) : null}
                 </div>
               </div>
             </article>
-          ))}
+            ),
+          )}
         </div>
 
         <h3 className="work-close">
